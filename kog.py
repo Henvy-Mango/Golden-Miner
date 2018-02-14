@@ -47,6 +47,7 @@ if __name__ == '__main__':
     gain_money = input('请输入已获得金币数：\n')
     gain_money = int(gain_money)
     total_money = input('请输入金币上限：\n')
+    total_money = int(total_money)
     if gain_money >= 0 and gain_money < 4200:
         repeat_times = 1 + int((total_money - gain_money) / 19)
         
