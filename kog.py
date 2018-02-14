@@ -46,9 +46,9 @@ def do_money_work():
 if __name__ == '__main__':
     gain_money = input('请输入已获得金币数：\n')
     gain_money = int(gain_money)
-    
+    total_money = input('请输入金币上限：\n')
     if gain_money >= 0 and gain_money < 4200:
-        repeat_times = 1 + int((4200 - gain_money)/19)
+        repeat_times = 1 + int((total_money - gain_money) / 19)
         
         print('还有' + str(repeat_times) + '次完成')
         
