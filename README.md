@@ -1,2 +1,0 @@
-# Golden-Miner
-None
