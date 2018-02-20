@@ -5,9 +5,12 @@
 - 需要安卓手机
 - 手机需开启USB调试模式，允许电脑调试，允许模拟点击。
 - 电脑安装好手机驱动。
+- 手机使用数据线接入电脑
 - 电脑上需要安装[Python3](https://www.python.org/downloads/)，并在安装界面勾选Add to PATH。
 ![Add to PATH](https://imgsa.baidu.com/exp/w=480/sign=b0e60784a1d3fd1f3609a332004f25ce/80cb39dbb6fd5266e27ba8bea218972bd50736c3.jpg)
 - 刷金币进入冒险模式，选择`魔女的回忆`，进入有闯关的按钮的界面，运行`run.bat`。
+![pic](https://github.com/Henvy-Mango/Golden-Miner/raw/master/pic.png)
+- 根据脚本提示输入数字后回车
 - 重复`加载 -> 战斗 -> 结算`流程。
 - 通关一次可获得19金币。
 - 通关222次可获得周上限4200金币
@@ -18,8 +21,8 @@
 - 一般修改加载时间即可达到想要的效果
 
 ## 调整方法 
-- 使用文本编辑器打开kog.py
-- 修改step_wait以调整等待时间
+- 使用文本编辑器打开`kog.py`
+- 修改`step_wait`以调整等待时间
 
 ```python
 # 各步骤等待间隔
