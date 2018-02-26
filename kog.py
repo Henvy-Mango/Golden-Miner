@@ -13,8 +13,8 @@ device_x, device_y = 1920, 1080
 #step_wait[0]为加载时间，不同手机加载速度不同
 #step_wait[1]为战斗时间
 #step_wait[2]为结算时间
-#小米6的适配参数为[12,22,2]
-step_wait = [12,22,2]
+#小米6的适配参数为[12,25,2]
+step_wait = [12,25,2]
 
 # 刷金币次数
 #刷满4200金币需要222次
@@ -47,20 +47,17 @@ def do_money_work():
 
 
 if __name__ == '__main__':
-    gain_money = input('请输入已获得金币数：\n')
+    gain_money = input('需要获得的金币数：\n')
     gain_money = int(gain_money)
-    total_money = input('请输入金币上限：\n')
-    total_money = int(total_money)
 
-    if gain_money < total_money:
-        if gain_money >= 0 and gain_money < 4200:
-            repeat_times = 1 + int((total_money - gain_money) / 19)
+    if gain_money >= 0 and gain_money < 4200:
+        repeat_times = 1 + int(gain_money / 19)
         
-            print('还有' + str(repeat_times) + '次完成')
+        print('还有' + str(repeat_times) + '次完成')
         
-            for i in range(repeat_times):
-                logging.info('round #{}'.format(i + 1))
-                do_money_work()
+        for i in range(repeat_times):
+            logging.info('round #{}'.format(i + 1))
+            do_money_work()
     else:
         print('Error!')
     
