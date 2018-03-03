@@ -4,7 +4,7 @@
 ## 使用说明
 - 需要安卓手机
 - 手机需开启USB调试模式，允许电脑调试，允许模拟点击。
-- !!!重点!!!电脑安装好手机`驱动`
+- ！！！**重点**！！！电脑安装好手机`驱动`
 - 手机使用数据线接入电脑
 - 电脑上需要安装[Python3](https://www.python.org/downloads/)，并在安装界面勾选Add to PATH。
 ![Add to PATH](https://imgsa.baidu.com/exp/w=480/sign=b0e60784a1d3fd1f3609a332004f25ce/80cb39dbb6fd5266e27ba8bea218972bd50736c3.jpg)
