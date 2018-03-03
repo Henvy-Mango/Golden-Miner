@@ -1,1 +1,1 @@
-python -i kog.py
+python -i run.py
