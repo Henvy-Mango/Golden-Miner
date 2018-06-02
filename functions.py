@@ -2,9 +2,6 @@ import logging
 import os
 import time
 
-def log_information():
-    logging.basicConfig(format='%(asctime)s %(message)s',datefmt='%m/%d/%Y %I:%M:%S %p',level=logging.DEBUG)
-
 def tap_screen(x, y,device_x,device_y):
     #模拟点击
     base_x, base_y = 1920, 1080
@@ -30,7 +27,7 @@ def working(wait,device_x,device_y):
 
 def main(wait,device_x,device_y):
     #输出日志
-    log_information()
+    logging.basicConfig(format='%(asctime)s %(message)s',datefmt='%m/%d/%Y %I:%M:%S %p',level=logging.DEBUG)    
     #询问需求
     gain_money = input('需要获得的金币数(回车默认刷满)：\n')
     if gain_money == '':
