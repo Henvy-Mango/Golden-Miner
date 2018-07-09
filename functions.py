@@ -9,12 +9,27 @@ def tap_screen(x, y,device_x,device_y):
     real_y = int(y / base_y * device_y)
     os.system('adb shell input tap {} {}'.format(real_x, real_y))
 
+def first_working(wait,device_x,device_y):
+    logging.debug('# First time...')
+    tap_screen(1450, 910,device_x,device_y)
+    time.sleep(wait[0])
+
+    logging.debug('# Auto mode active...')
+    tap_screen(1780, 40,device_x,device_y)        
+    for i in range(wait[1]):
+        tap_screen(1720, 80,device_x,device_y)
+        time.sleep(1)
+
+    logging.debug('# Repeating...\n')
+    tap_screen(1600, 980,device_x,device_y)
+    time.sleep(wait[2])
+
 def working(wait,device_x,device_y):
     logging.debug('#1 Starting...')
     tap_screen(1450, 910,device_x,device_y)
     time.sleep(wait[0])
 
-    logging.debug('#2 Working...')
+    logging.debug('#2 Waiting...')
 
     for i in range(wait[1]):
         tap_screen(1720, 80,device_x,device_y)
@@ -26,13 +41,16 @@ def working(wait,device_x,device_y):
 
 def main(wait,device_x,device_y):
     #输出日志
-    logging.basicConfig(format='%(asctime)s %(message)s',datefmt='%m/%d/%Y %I:%M:%S %p',level=logging.DEBUG)    
+    logging.basicConfig(format='%(asctime)s %(message)s',
+        datefmt='%Y/%m/%d %I:%M:%S %p',level=logging.DEBUG)    
+    
     #询问需求
-    gain_money = input('需要获得的金币数(回车默认刷满)：\n')
+    gain_money = input('需要获得的金币数(回车默认刷满):')
     if gain_money == '':
         gain_money = 4200
     else:
         gain_money = int(gain_money)
+    
     #判断模块
     if gain_money >= 0 and gain_money <= 4200:
         repeat = 1 + int(gain_money / 19)
@@ -46,13 +64,12 @@ def main(wait,device_x,device_y):
         print('1')
         time.sleep(1)
 
-        #循环模块
-        logging.debug('#First time...\n')
-        tap_screen(1450, 910,device_x,device_y)
-        time.sleep(wait[0])   
-        tap_screen(1780, 40,device_x,device_y)        
+        #初始化
+        first_working(wait,device_x,device_y)
+
+        #循环模块 
         for i in range(repeat):
-            logging.info('Round #{}'.format(i + 1))
+            logging.info('Time #{}'.format(i + 2))
             working(wait,device_x,device_y)
     else:
         print('Error!')
