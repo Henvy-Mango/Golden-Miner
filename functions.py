@@ -15,7 +15,6 @@ def working(wait,device_x,device_y):
     time.sleep(wait[0])
 
     logging.debug('#2 Working...')
-    tap_screen(1780, 40,device_x,device_y)
 
     for i in range(wait[1]):
         tap_screen(1720, 80,device_x,device_y)
@@ -38,10 +37,20 @@ def main(wait,device_x,device_y):
     if gain_money >= 0 and gain_money <= 4200:
         repeat = 1 + int(gain_money / 19)
         print('还有' + str(repeat) + '次完成')
-                 
+        
         print('三秒后开始')
-        time.sleep(3)
+        print('3')
+        time.sleep(1)
+        print('2')
+        time.sleep(1)        
+        print('1')
+        time.sleep(1)
+
         #循环模块
+        logging.debug('#First time...\n')
+        tap_screen(1450, 910,device_x,device_y)
+        time.sleep(wait[0])   
+        tap_screen(1780, 40,device_x,device_y)        
         for i in range(repeat):
             logging.info('Round #{}'.format(i + 1))
             working(wait,device_x,device_y)
