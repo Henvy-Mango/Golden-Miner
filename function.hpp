@@ -28,13 +28,13 @@ string to_string(int n) //int转string
     ss[j] = '\0';    
     return ss;
 }
-string real(int x,int y,int device_x,int device_y) //计算物理机真实位置 
+string real(int tap_x,int tap_y,int device_x,int device_y) //计算物理机的真实位置 
 {
 	int base_x = 1920;
 	int base_y = 1080;
 	int real_x,real_y;
-	real_x = x * (base_x / device_x);
-	real_y = y * (base_y / device_y);
+	real_x = tap_x * (base_x / device_x);
+	real_y = tap_y * (base_y / device_y);
 	string space = " ";
 	string real = to_string(real_x) + space + to_string(real_y);
 	return real;
