@@ -45,3 +45,8 @@ void tap_screen(string ever) //点击屏幕
 	string last = cmd + ever;
 	system(last.data());
 }
+void adb_init() //虚拟机adb初始化
+{
+	string order = "adb connect 127.0.0.1:7555 ";
+	system(order.data());
+}
