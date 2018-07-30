@@ -65,7 +65,7 @@ def main(wait,device_x,device_y):
         time.sleep(1)
 
         #初始化
-        first_working(wait,device_x,device_y)
+        #first_working(wait,device_x,device_y)
 
         #循环模块 
         for i in range(repeat):
