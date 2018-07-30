@@ -33,8 +33,8 @@ string real(int tap_x,int tap_y,int device_x,int device_y) //计算物理机的�
 	int base_x = 1920;
 	int base_y = 1080;
 	int real_x,real_y;
-	real_x = tap_x * (base_x / device_x);
-	real_y = tap_y * (base_y / device_y);
+	real_x = tap_x * device_x / base_x;
+	real_y = tap_y * device_y / base_y;
 	string space = " ";
 	string real = to_string(real_x) + space + to_string(real_y);
 	return real;
@@ -45,7 +45,7 @@ void tap_screen(string ever) //点击屏幕
 	string last = cmd + ever;
 	system(last.data());
 }
-void adb_init() //虚拟机adb初始化
+void adb_init() //虚拟机adb初始化连接
 {
 	string order = "adb connect 127.0.0.1:7555 ";
 	system(order.data());
