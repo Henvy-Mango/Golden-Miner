@@ -9,7 +9,7 @@ int main()
 	//step_wait[0]为加载时间，不同手机加载速度不同
 	//step_wait[1]为战斗时间
 	//step_wait[2]为结算时间
-	 
+
 	//主程序 
 	cout<<"还有222次完成"<<endl;
 	cout<<"三秒后开始"<<endl;
@@ -19,6 +19,10 @@ int main()
 	Sleep(1000);
 	cout<<"1"<<endl;
 	Sleep(1000);
+	
+	//虚拟机adb初始化
+	//adb_init();
+	
 	//循环模块 
 	for(int i=1;i<223;i++)
 	{	
