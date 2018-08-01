@@ -9,6 +9,10 @@ def tap_screen(x, y,device_x,device_y):
     real_y = int(y / base_y * device_y)
     os.system('adb shell input tap {} {}'.format(real_x, real_y))
 
+def VT_init():
+	#虚拟机adb初始化
+	os.system('adb connect 127.0.0.1:7555')
+	
 def first_working(wait,device_x,device_y):
     logging.debug('#1 First time...')
     tap_screen(1450, 910,device_x,device_y)
