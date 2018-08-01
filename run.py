@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-import logging
-import os
-import time
-from functions import main
+import functions
 # 屏幕分辨率(根据手机修改)
 x,y = 1920, 1080
 
@@ -19,5 +16,8 @@ wait_times = [10,22,3]
 # 刷金币次数
 #刷满4200金币需要222次
 #直接回车默认刷满
-main(wait_times,x,y)
 
+#虚拟机adb初始化
+#functions.VT_init()
+
+functions.main(wait_times,x,y)
