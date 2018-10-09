@@ -71,7 +71,7 @@ def main(wait,device_x,device_y):
         #初始化
         #first_working(wait,device_x,device_y)
 
-        #循环模块 
+        #循环模块
         for i in range(repeat):
             logging.info('Time #{}'.format(i + 2))
             working(wait,device_x,device_y)
