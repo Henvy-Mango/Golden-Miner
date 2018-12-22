@@ -48,7 +48,7 @@
 
 ## Python版本
 - 电脑上需要安装[Python3.4以上的版本](https://www.python.org/downloads/)，并在安装界面勾选Add to PATH。
-![Add to PATH](https://imgsa.baidu.com/exp/w=480/sign=b0e60784a1d3fd1f3609a332004f25ce/80cb39dbb6fd5266e27ba8bea218972bd50736c3.jpg)
+![Add to PATH](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546095061&di=cc3e0fa6759cc89f5b96b61d44e8fb8c&imgtype=jpg&er=1&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fexp%2Fw%3D480%2Fsign%3D94ec2c1128a446237ecaa46aa8237246%2F11385343fbf2b2116addd325c28065380dd78eee.jpg)
 - 模拟器进入冒险模式，选择`魔女的回忆`，进入带有闯关的按钮的界面，运行`run.bat`。
 ![pic](https://github.com/Henvy-Mango/Golden-Miner/raw/master/pic.png)
 - 根据脚本提示输入数字后回车(直接回车默认刷4200金币)
