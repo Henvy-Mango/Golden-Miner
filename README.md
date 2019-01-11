@@ -20,6 +20,8 @@
 ## 使用说明
 - 模拟器进入冒险模式，选择`魔女的回忆`，进入带有闯关的按钮的界面。
 ![pic](https://github.com/Henvy-Mango/Golden-Miner/raw/master/pic.png)
+- 选择使用三个射手英雄
+- 使用脚本前一定要进入上面图片所示的界面
 - 运行`run.exe`或者`run.bat`即可。
 
 ## C++版参数调整方法
