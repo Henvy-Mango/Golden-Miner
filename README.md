@@ -50,7 +50,7 @@
 ```
 ## Python版
 - 电脑上需要安装Python3.4以上的版本，并在安装界面勾选Add to PATH。
-
+![Add to PATH](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546095061&di=cc3e0fa6759cc89f5b96b61d44e8fb8c&imgtype=jpg&er=1&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fexp%2Fw%3D480%2Fsign%3D94ec2c1128a446237ecaa46aa8237246%2F11385343fbf2b2116addd325c28065380dd78eee.jpg)
 ## 错误排查
 - 脚本在运行，但虚拟机无反应，不能自动点击
 - 检查分辨率是否正确
