@@ -35,9 +35,9 @@ def working(wait,device_x,device_y):
 
     logging.debug('#2 Waiting...')
 
-    for i in range(wait[1]):
+    for i in range(2*wait[1]):
         tap_screen(1720, 80,device_x,device_y)
-        time.sleep(1)
+        time.sleep(0.3)
 
     logging.debug('#3 Repeating...\n')
     tap_screen(1600, 980,device_x,device_y)
@@ -73,7 +73,7 @@ def main(wait,device_x,device_y):
 
         #循环模块
         for i in range(repeat):
-            logging.info('Time #{}'.format(i + 2))
+            logging.info('Time #{}'.format(i + 1))
             working(wait,device_x,device_y)
     else:
         print('Error!')
