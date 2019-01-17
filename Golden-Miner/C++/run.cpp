@@ -8,7 +8,7 @@ int main()
 	//step_wait[0]为加载时间，不同手机加载速度不同
 	//step_wait[1]为战斗时间
 	//step_wait[2]为结算时间	
-	int wait[3] = { 18,22,3 };
+	int wait[3] = { 14,22,3 };
 
 	FILE *fp = fopen("Settings.txt", "r+");
 	if (fp == NULL)
@@ -62,18 +62,18 @@ int main()
 	{
 		cout << "Time #" << i << endl;
 		cout << "#1 Staring..." << endl;
-		tap_screen(real(1450, 910, device_x, device_y));
+		tap_screen(real(1430, 880, device_x, device_y));
 		Sleep(wait[0] * 1000);
 
 		cout << "#2 Waiting..." << endl;
-		for (int j = 0; j < wait[1]; j++)
+		for (int j = 0; j < 2*wait[1]; j++)
 		{
 			tap_screen(real(1720, 80, device_x, device_y));
-			Sleep(1000);
+			Sleep(300);
 		}
 
 		cout << "#3 Repeating..." << endl;
-		tap_screen(real(1600, 980, device_x, device_y));
+		tap_screen(real(1620, 1000, device_x, device_y));
 		Sleep(wait[2] * 1000);
 	}
 
