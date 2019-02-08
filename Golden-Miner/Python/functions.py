@@ -35,9 +35,9 @@ def working(wait,device_x,device_y):
 
     logging.debug('#2 Waiting...')
 
-    for i in range(2*wait[1]):
+    for i in range(4*wait[1]):
         tap_screen(1720, 80,device_x,device_y)
-        time.sleep(0.3)
+        time.sleep(0.25)
 
     logging.debug('#3 Repeating...\n')
     tap_screen(1600, 980,device_x,device_y)
