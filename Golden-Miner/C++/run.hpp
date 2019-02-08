@@ -4,7 +4,7 @@
 
 using namespace std;
 
-string to_string(int n) //int转string 
+string int_to_string(int n) //int转string 
 {
 	const int max = 100;
 	int m = n;
@@ -46,7 +46,7 @@ string real(int tap_x, int tap_y, int device_x, int device_y) //计算物理机的真实
 	real_y = tap_y * device_y / base_y;
 
 	string space = " ";
-	string real = to_string(real_x) + space + to_string(real_y);
+	string real = int_to_string(real_x) + space + int_to_string(real_y);
 
 	return real;
 }
