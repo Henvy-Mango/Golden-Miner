@@ -66,10 +66,10 @@ int main()
 		Sleep(wait[0] * 1000);
 
 		cout << "#2 Waiting..." << endl;
-		for (int j = 0; j < 2*wait[1]; j++)
+		for (int j = 0; j < 4*wait[1]; j++)
 		{
 			tap_screen(real(1720, 80, device_x, device_y));
-			Sleep(300);
+			Sleep(250);
 		}
 
 		cout << "#3 Repeating..." << endl;
