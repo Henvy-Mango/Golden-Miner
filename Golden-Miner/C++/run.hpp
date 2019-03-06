@@ -59,8 +59,9 @@ void tap_screen(string ever) //点击屏幕
 	system(last.data());
 }
 
-void adb_init() //虚拟机adb初始化连接
+void adb_init(int port) //虚拟机adb初始化连接
 {
-	string order = "adb connect 127.0.0.1:7555 ";
+	string port_s = int_to_string(port);
+	string order = "adb connect 127.0.0.1:" + port_s;
 	system(order.data());
 }
