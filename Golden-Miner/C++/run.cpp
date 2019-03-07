@@ -75,10 +75,12 @@ int main()
 			DWORD start = GetTickCount(); //开始计时
 			{
 				tap_screen(real(1720, 80, device_x, device_y));
+				tap_screen(real(1720, 80, device_x, device_y));
 			}
 			DWORD end = GetTickCount(); //结束计时
 			int time = 1000 - (end - start);
-			Sleep(time);
+			if (time > 0)
+				Sleep(time);
 		}
 
 		cout << "#3 Repeating..." << endl;
