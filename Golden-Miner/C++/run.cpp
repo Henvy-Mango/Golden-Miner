@@ -78,7 +78,8 @@ int main()
 			}
 			DWORD end = GetTickCount(); //½áÊø¼ÆÊ±
 			int time = 1000 - (end - start);
-			Sleep(time);
+			if (time > 0)
+				Sleep(time);
 		}
 
 		cout << "#3 Repeating..." << endl;
